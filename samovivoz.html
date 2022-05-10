@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head><link id="logo" rel="stylesheet" href=".\сss\oformlenie.css">
+      <link rel="shortcut icon" href=".\Photo\icone.ico">
+      <meta name="viewport" content="width=device-width, initial scale=1.0"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    
+
+<body>
+  
+
+    <header>
+        <div class="logo"><input type="image" id="logotip" onclick="Main()" src=".\Photo\hitech.png" alt=""></input></div>
+       
+        <div class="zvonite"><p>Звоните, если возникли вопросы</br>
+          A1: +375-44-742-29-89 </p></div>
+          <div class="login">Username: <b  class="login_name"></b></div>
+
+        <div class="registration"><img id="registr" onclick="location.href='./registration.html'" src=".\Photo\registr.png" alt=""></div>
+      </header>
+        
+    
+   
+
+
+
+
+
+
+<div class="center">
+  <div class="oform"><p id="oformlenie">Оформление заказа</p></div>
+<div class="form_block">
+  <div class="centrirovanie">
+<div class="dostavka_nadom"><p id="dostavka"> Самовывоз</p></div>
+<div class="inputs">
+<div class="adres"><p id="adres">Пункт:</p><input id="input_adress" type="text"></div>
+<div class="number_phone"><p id="number_phone">Номер телефона:</p><input id="input_phone" type="text"></div>
+<div class="emaul"><p id="emaul">Email:</p><input id="input_email" type="text"></div>
+</div>
+<div class="input"><input id="input" onclick="location.href='./thanks.html?name='+ing" type="image" src="./Photo/kupi.png"></div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+
+
+  <div class="logo_footer">
+
+    <div class="logo_f"><img id="logotip_footer" src=".\Photo\hitech.png" alt=""></div>
+    <p class="nomer">+375447422989</p>
+     <p class="gmail"> egooorrrnok@gmail.ru</p>
+
+  </div>
+
+
+
+
+
+
+
+<div class="social">
+
+<div class="svaz"><img id="svaz" src="./Photo/svaz.png" alt=""></div>
+<div class="soc"><img id="facebook" src="./Photo/facebook.png" alt=""> <img id="telega" src="./Photo/telega.png" alt=""><img id="vk" src="./Photo/VK.png" alt=""></div>
+</div>
+
+
+
+
+
+
+
+<div class="vozrast">
+<img id="vozrast" src=".\Photo\vozrast.png" alt="">
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./js/tovar.js"></script>
+
+
+
+ 
+
+<script>
+  var params = new URLSearchParams(document.location.search);
+var i = params.get("idenf");
+document.getElementById("name").innerHTML=tovar[i].name;
+document.getElementById("screen").innerHTML=tovar[i].screen;
+document.getElementById("notification").innerHTML=tovar[i].notification;
+document.getElementById("brend").innerHTML=tovar[i].brend;
+document.getElementById("series").innerHTML=tovar[i].series;
+document.getElementById("autonomy").innerHTML=tovar[i].autonomy;
+document.getElementById("dop").innerHTML=tovar[i].dop_info;
+document.getElementById("kolvo_rubl").innerHTML=tovar[i].price;
+document.getElementById("garant_data").innerHTML=tovar[i].garant_data;
+
+
+
+
+</script>
+
+<script>
+  let photo=document.createElement("img");
+photo.src=imgArr[i].src;
+let div = document.getElementById("foto") ;
+ div.innerHTML="<img id='tovar_photo' src='"+photo.src+"'/>"
+
+</script>
+<script>
+ 
+ if(ing){
+document.querySelector(".login_name").innerHTML=ing;}
+else{
+  document.querySelector(".login").style.display="none";
+}
+  </script>
+
+
+</body>
+</html>

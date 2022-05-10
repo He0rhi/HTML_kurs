@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link id="logo" rel="stylesheet" href=".\сss\main.css">
+  <link rel="shortcut icon" href=".\Photo\icone.ico">
+
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./js/tovar.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<body>
+
+
+  <header>
+    <div class="logo"><input type="image" id="logotip" onclick="Main()" src=".\Photo\hitech.png" alt=""></input></div>
+
+    <div class="zvonite">
+      <p>Звоните, если возникли вопросы</br>
+        A1: +375-44-742-29-89 </p>
+    </div>
+    <div class="login">Username: <b class="login_name"></b></div>
+    <div class="registration"></div>
+  </header>
+
+
+
+  <div class="reklama_cats">
+    <div class="black_reklama"><img src=".\Photo\reklama.png" alt="" class="reklama"></div>
+    <div class="category">
+      <div class="cats">
+
+        <button class="button cat_all" data-filter="all">Всё</button>
+        <button class="button cat_zarad" data-filter="zarad">Зарядные <br> устройства</button>
+        <button class="button cat_notebook" data-filter="notebook">Ноутбуки</button>
+        <button class="button cat_smart" data-filter="smart">Смартфоны</button>
+        <button class="button cat_clock" data-filter="clock">Электронные <br> часы</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="center">
+    <div class="nadtovar">
+      <div class="hit"><img id="hit" src="./Photo/hit.png" alt="Хиты продаж"></div>
+
+
+    </div>
+
+    <div class="tovar_full">
+
+      <div class="one notebook"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_0"></div> <a onclick="location.href='./tovar.html?idenf=0&name='+ing" id="figure_0"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_0"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=0&name='+ing" src="./Photo/buy.png" id="buy"></input>
+        </div>
+      </div>
+      <div class="one zarad"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_1"></div> <a onclick="location.href='./tovar.html?idenf=1&name='+ing" id="figure_1"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_1"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=1&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+      <div class="one zarad"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_2"></div> <a onclick="location.href='./tovar.html?idenf=2&name='+ing" id="figure_2"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_2"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=2&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+      <div class="one zarad"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_3"></div> <a onclick="location.href='./tovar.html?idenf=3&name='+ing" id="figure_3"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_3"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=3&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+      <div class="one smart"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_4"></div> <a onclick="location.href='./tovar.html?idenf=4&name='+ing" id="figure_4"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_4"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=4&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+
+      <div class="one smart"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_5"></div> <a onclick="location.href='./tovar.html?idenf=5&name='+ing" id="figure_5"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_5"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=5&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+      <div class="one clock"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_6"></div> <a onclick="location.href='./tovar.html?idenf=6&name='+ing" id="figure_6"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_6"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=6&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+      <div class="one clock"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_7"></div> <a onclick="location.href='./tovar.html?idenf=7&name='+ing" id="figure_7"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_7"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=7&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+      <div class="one notebook"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_8"></div> <a onclick="location.href='./tovar.html?idenf=8&name='+ing" id="figure_8"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_8"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=8&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+      <div class="one notebook"> <img id="tih" src="./Photo/tih.png" alt="">
+        <div id="tovar_9"></div> <a onclick="location.href='./tovar.html?idenf=9&name='+ing" id="figure_9"></a>
+        <div class="buy">
+          <p class="rubls" id="rubls_9"></p> <input type="image"
+            onclick="location.href='./tovar.html?idenf=9&name='+ing" id="buy" src="./Photo/buy.png" alt=""></input>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="musor">
+
+     
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+
+
+
+
+    <div class="logo_footer">
+
+      <div class="logo_f"><img id="logotip_footer" src=".\Photo\hitech.png" alt=""></div>
+      <p class="nomer">+375-44-74-229-89</p>
+      <p class="gmail"> egooorrrnok@gmail.ru</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="social">
+
+      <div class="svaz"><img id="svaz" src="./Photo/svaz.png" alt=""></div>
+      <div class="soc"><img id="facebook" src="./Photo/facebook.png" alt=""> <img id="telega" src="./Photo/telega.png"
+          alt=""><img id="vk" src="./Photo/VK.png" alt=""></div>
+    </div>
+
+
+
+
+
+
+
+    <div class="vozrast">
+      <img id="vozrast" src=".\Photo\vozrast.png" alt="">
+    </div>
+
+
+  </footer>
+
+
+
+
+
+
+  <script>
+    function app() {
+      const buttons = document.querySelectorAll('.button');
+      const cards = document.querySelectorAll('.one');
+
+      function filter(category, items) {
+        items.forEach((item) => {
+          const isItemFiltered = !item.classList.contains(category);
+          const isShowAll = category === 'all';
+          if (isItemFiltered && !isShowAll) {
+            item.classList.add('hide');
+          }
+          else {
+            item.classList.remove('hide');
+
+          }
+        })
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const currentCategory = button.dataset.filter;
+          filter(currentCategory, cards);
+        })
+      })
+    }
+    app()
+  </script>
+
+
+
+  <script>
+
+    for (let i = 0; i < 10; i++) {
+      let figure = document.getElementById("figure_" + [i]);
+      figure.innerHTML = tovar[i].name;
+
+
+    }
+
+
+  </script>
+
+  <script>
+    for (let i = 0; i < 10; i++) {
+      let photo = document.createElement("img");
+      photo.src = imgArr[i].src;
+      let div = document.getElementById("tovar_" + [i]);
+      div.innerHTML = "<img id='tovar_photo' src='" + photo.src + "'/>"
+    }
+  </script>
+
+  <script>
+
+    for (let i = 0; i < 10; i++) {
+      let figure = document.getElementById("rubls_" + [i]);
+      figure.innerHTML = tovar[i].price;
+
+
+    }
+
+  </script>
+  <script>
+
+
+    if (ing) {
+      document.querySelector(".login_name").innerHTML = ing;
+    }
+    else {
+      document.querySelector(".login").style.display = "none";
+    }
+  </script>
+
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    var path = "./xml/xml.xml";
+    xmlhttp.open("GET", path, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+var xmlDoc = this.responseXML;
+var warning_xml=xmlDoc.getElementsByTagName("warning") [0].childNodes[0].nodeValue;
+var img_xml=xmlDoc.getElementsByTagName("img") [0].childNodes[0].nodeValue;
+let img=`<input type="image" id="registr" src="${img_xml}"
+        onclick="location.href='./registration.html'" alt="" />`;
+        document.querySelector(".registration").innerHTML=img;
+console.log(img_xml);
+let warning=`<div class="warning">${warning_xml}</div>`;
+document.querySelector(".musor").innerHTML=warning;
+
+    }
+  }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

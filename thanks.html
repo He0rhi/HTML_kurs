@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head><link id="logo" rel="stylesheet" href=".\сss\thanks.css">
+      <link rel="shortcut icon" href=".\Photo\icone.ico">
+      <meta name="viewport" content="width=device-width, initial scale=1.0"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    
+
+<body>
+  
+
+    <header>
+        <div class="logo"><input type="image" id="logotip" onclick="Main()" src=".\Photo\hitech.png" alt=""></input></div>
+       
+        <div class="zvonite"><p>Звоните, если возникли вопросы</br>
+          A1: +375-44-742-29-89 </p></div>
+          <div class="login">Username: <b  class="login_name"></b></div>
+
+        <div class="registration"><input type="image" id="registr" onclick="location.href='./registration.html'" src=".\Photo\registr.png" alt=""></div>
+      </header>
+        
+    
+   
+
+
+
+
+
+
+<div class="center">
+  <div class="oform"><p id="oformlenie">Оформление заказа</p></div>
+<div class="form_block">
+  <div class="centrirovanie">
+<div class="dostavka_nadom"><p id="dostavka">Спасибо за покупку!</p></div>
+<div class="inputs">
+
+<div class="input"><input id="input" onclick="location.href='./main.html?name='+ing" type="image" src="./Photo/main.png"></div>
+</div>
+
+
+</div>
+</div>
+
+<div class="musor">
+
+  <div class="warning"><p id="warning">Сопровождающие товар фотографии предоставлены производителем, отображение на них внешнего вида товара зависит от настроек экрана и может отличаться от оригинала. Производитель может изменять дизайн, технические характеристики и комплектацию изделия без уведомления об этом продавца. Уточняйте важные для Вас параметры при заказе.
+
+  </p></div>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+
+
+  <div class="logo_footer">
+
+    <div class="logo_f"><img id="logotip_footer" src=".\Photo\hitech.png" alt=""></div>
+    <p class="nomer">+375447422989</p>
+     <p class="gmail"> egooorrrnok@gmail.ru</p>
+
+  </div>
+
+
+
+
+
+
+
+<div class="social">
+
+<div class="svaz"><img id="svaz" src="./Photo/svaz.png" alt=""></div>
+<div class="soc"><img id="facebook" src="./Photo/facebook.png" alt=""> <img id="telega" src="./Photo/telega.png" alt=""><img id="vk" src="./Photo/VK.png" alt=""></div>
+</div>
+
+
+
+
+
+
+
+<div class="vozrast">
+<img id="vozrast" src=".\Photo\vozrast.png" alt="">
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./js/tovar.js"></script>
+
+
+
+<script>
+
+ 
+if(ing){
+document.querySelector(".login_name").innerHTML=ing;}
+else{
+  document.querySelector(".login").style.display="none";
+}
+  </script>
+
+
+
+</body>
+</html>

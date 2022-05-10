@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head><link id="logo" rel="stylesheet" href=".\сss\tovar.css">
+      <link rel="shortcut icon" href=".\Photo\icone.ico">
+     
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    
+
+<body>
+  
+
+    <header>
+        <div class="logo"><input type="image" id="logotip" onclick="Main()" src=".\Photo\hitech.png" alt=""></input></div>
+       
+        <div class="zvonite"><p>Звоните, если возникли вопросы</br>
+          A1: +375-44-742-29-89 </p></div>
+          <div class="login">Username: <b  class="login_name"></b></div>
+
+        <div class="registration"><img id="registr" onclick="location.href='./registration.html'" src=".\Photo\registr.png" alt=""></div>
+      </header>
+        
+    
+   
+
+
+
+
+
+
+<div class="center">
+  <div class="name"><p id="name">     </p></div>
+  <div class="tovarchik">
+<div id="foto"></div>
+
+
+
+
+<div class="haracters">
+
+<div class="osnova"> <div class="infoo">Основные характеристики</div> <div class="info">
+  <div>Бренд:<b id="brend"></b></div>
+  <div>Экран:<b id="screen"></b></div> 
+ <div> Год выпуска:  <b id="notification"></b></div>
+  
+ <div> Серия:  <b id="series"></b></div>
+  
+ <div>Время автономной работы: <b id="autonomy"></b></div>
+</div>   
+</div>
+<div class="dopolneine"> <div class="dopp">Дополнительная инфомрация</div> <div id="dop"></div>          </div>
+</div>
+
+
+<div class="buy">
+
+  <div class="sena_rubl"><p id="kolvo_rubl"></p><p id="nalihie">В наличии</p> </div>
+  <div class="na_dom"><p id="na_dom">Доставка на дом</p> <input type="image" onclick="location.href='./na_dom.html?name='+ing" id="cupi" src="./Photo/kupi.png" alt="купить"></div>
+<div class="samovivoz"><p id="samovivoz">Самовывоз</p> <input type="image" id="cupi" onclick="location.href='./samovivoz.html?name='+ing" src="./Photo/kupi.png" alt="купить"></div>
+</div>
+
+
+<div class="city">
+
+  <div class="sity"> <p id="vach">Ваш город:</p> <input id="sity" type="text"></div>
+
+  <div class="garant"><p id="garant_ob">Гарантийные обязательства</p><div class="garant_data"> <img id="garant" src="./Photo/garant.png" alt="гарантия"><p id="garant_data">  </p></div></div>
+
+</div>
+
+
+
+</div>
+
+
+<div class="musor">
+
+  <div class="warning"><p id="warning">Сопровождающие товар фотографии предоставлены производителем, отображение на них внешнего вида товара зависит от настроек экрана и может отличаться от оригинала. Производитель может изменять дизайн, технические характеристики и комплектацию изделия без уведомления об этом продавца. Уточняйте важные для Вас параметры при заказе.
+
+  </p></div>
+
+
+  <div class="general"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+
+
+  <div class="logo_footer">
+
+    <div class="logo_f"><img id="logotip_footer" src=".\Photo\hitech.png" alt=""></div>
+    <p class="nomer">+375447422989</p>
+     <p class="gmail"> egooorrrnok@gmail.ru</p>
+
+  </div>
+
+
+
+
+
+
+
+<div class="social">
+
+<div class="svaz"><img id="svaz" src="./Photo/svaz.png" alt=""></div>
+<div class="soc"><img id="facebook" src="./Photo/facebook.png" alt=""> <img id="telega" src="./Photo/telega.png" alt=""><img id="vk" src="./Photo/VK.png" alt=""></div>
+</div>
+
+
+
+
+
+
+
+<div class="vozrast">
+<img id="vozrast" src=".\Photo\vozrast.png" alt="">
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./js/tovar.js"></script>
+
+
+
+ 
+
+<script>
+var i = params.get("idenf");
+document.getElementById("name").innerHTML=tovar[i].name;
+document.getElementById("screen").innerHTML=tovar[i].screen;
+document.getElementById("notification").innerHTML=tovar[i].notification;
+document.getElementById("brend").innerHTML=tovar[i].brend;
+document.getElementById("series").innerHTML=tovar[i].series;
+document.getElementById("autonomy").innerHTML=tovar[i].autonomy;
+document.getElementById("dop").innerHTML=tovar[i].dop_info;
+document.getElementById("kolvo_rubl").innerHTML=tovar[i].price;
+document.getElementById("garant_data").innerHTML=tovar[i].garant_data;
+
+
+
+  let photo=document.createElement("img");
+photo.src=imgArr[i].src;
+let div = document.getElementById("foto") ;
+ div.innerHTML="<img id='tovar_photo' src='"+photo.src+"'/>"
+
+</script>
+<script>
+
+
+ 
+if(ing){
+document.querySelector(".login_name").innerHTML=ing;}
+else{
+  document.querySelector(".login").style.display="none";
+}
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head><link id="logo" rel="stylesheet" href=".\сss\oformlenie.css">
+      <link rel="shortcut icon" href=".\Photo\icone.ico">
+      <meta name="viewport" content="width=device-width, initial scale=1.0"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    
+
+<body>
+  
+
+    <header>
+        <div class="logo"><input type="image" id="logotip" onclick="Main()"src=".\Photo\hitech.png" alt=""></input></div>
+       
+        <div class="zvonite"><p>Звоните, если возникли вопросы</br>
+          A1: +375-44-742-29-89 </p></div>
+          <div class="registration"><input type="image" id="registr" onclick="location.href='./registration.html'" src=".\Photo\registr.png" alt=""></div>
+        </header>
+        
+    
+   
+
+
+
+
+
+
+<div class="center">
+  <div class="oform"><p id="oformlenie">Регистрация</p></div>
+<div class="form_block">
+  <div class="centrirovanie">
+<div class="dostavka_nadom"><p id="dostavka"> Ввод</p></div>
+<div class="inputs">
+<form class="adres"><form><p id="adres">  Логин:</p><input name="login_input" id="input_adress" type="text"></form>
+<form class="number_phone"><form><p id="number_phone">Пароль:</p>
+  <input class="input_phone1" type="password" id="input_phone" name="input_phone" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+</form>
+
+</div>
+<div class="input_vhod"><input id="input_phone_log"   onclick="Log()" onclick="test_str()";
+  type="image" src="./Photo/vhod.png"></div>
+<div class="message">
+  <h3>Пароль должен содержать следующее:</h3>
+  <p id="letter" class="invalid"><b>Строчная</b> буква</p>
+  <p id="capital" class="invalid"> <b>Заглавная</b> буква</p>
+  <p id="number" class="invalid"><b>Цифры</b></p>
+  <p id="length" class="invalid">Минимум <b>8 символов</b></p>
+  <p id="nick" class="invalid">Введите <b>Имя</b></p>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+
+
+  <div class="logo_footer">
+
+    <div class="logo_f"><img id="logotip_footer" src=".\Photo\hitech.png" alt=""></div>
+    <p class="nomer">+375447422989</p>
+     <p class="gmail"> egooorrrnok@gmail.ru</p>
+
+  </div>
+
+
+
+
+
+
+
+<div class="social">
+
+<div class="svaz"><img id="svaz" src="./Photo/svaz.png" alt=""></div>
+<div class="soc"><img id="facebook" src="./Photo/facebook.png" alt=""> <img id="telega" src="./Photo/telega.png" alt=""><img id="vk" src="./Photo/VK.png" alt=""></div>
+</div>
+
+
+
+
+
+
+
+<div class="vozrast">
+<img id="vozrast" src=".\Photo\vozrast.png" alt="">
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./js/tovar.js"></script>
+
+
+
+ 
+
+<script>
+  var params = new URLSearchParams(document.location.search);
+var i = params.get("idenf");
+document.getElementById("name").innerHTML=tovar[i].name;
+document.getElementById("screen").innerHTML=tovar[i].screen;
+document.getElementById("notification").innerHTML=tovar[i].notification;
+document.getElementById("brend").innerHTML=tovar[i].brend;
+document.getElementById("series").innerHTML=tovar[i].series;
+document.getElementById("autonomy").innerHTML=tovar[i].autonomy;
+document.getElementById("dop").innerHTML=tovar[i].dop_info;
+document.getElementById("kolvo_rubl").innerHTML=tovar[i].price;
+document.getElementById("garant_data").innerHTML=tovar[i].garant_data;
+
+
+
+
+</script>
+
+<script>
+  let photo=document.createElement("img");
+photo.src=imgArr[i].src;
+let div = document.getElementById("foto") ;
+ div.innerHTML="<img id='tovar_photo' src='"+photo.src+"'/>"
+
+</script>
+
+<script>
+    function Log(){
+var name_input = document.getElementById("input_adress").value;
+document.location.href="./main.html?name="+name_input;
+  }
+
+  
+</script>
+<script>
+  
+</script>
+<script>
+  var myInput = document.getElementById("input_phone");
+  var letter = document.getElementById("letter");
+  var capital = document.getElementById("capital");
+  var number = document.getElementById("number");
+  var length = document.getElementById("length");
+  var nickname = document.getElementById("input_adress")
+  myInput.onfocus = function() {
+    document.querySelector(".message").style.display = "block";
+  }
+  
+  myInput.onblur = function() {
+    document.querySelector(".message").style.display = "none";
+  }
+  
+  myInput.onkeyup = function() {
+    var lowerCaseLetters = /[a-z]/g;
+    if(myInput.value.match(lowerCaseLetters)) {
+      letter.classList.remove("invalid");
+      letter.classList.add("valid");
+    } else {
+      letter.classList.remove("valid");
+      letter.classList.add("invalid");
+  }
+  
+    var upperCaseLetters = /[A-Z]/g;
+    if(myInput.value.match(upperCaseLetters)) {
+      capital.classList.remove("invalid");
+      capital.classList.add("valid");
+    } else {
+      capital.classList.remove("valid");
+      capital.classList.add("invalid");
+    }
+  
+    var numbers = /[0-9]/g;
+    if(myInput.value.match(numbers)) {
+      number.classList.remove("invalid");
+      number.classList.add("valid");
+    } else {
+      number.classList.remove("valid");
+      number.classList.add("invalid");
+    }
+  if(nickname.value.length>0){
+
+    nick.classList.remove("invalid");
+    nick.classList.add("valid");
+    } else {
+      nick.classList.remove("valid");
+      nick.classList.add("invalid");
+    }
+    if(myInput.value.length >= 8) {
+      length.classList.remove("invalid");
+      length.classList.add("valid");
+    } else {
+      length.classList.remove("valid");
+      length.classList.add("invalid");
+    }
+    if(myInput.value.length >= 8 && myInput.value.match(numbers) && myInput.value.match(upperCaseLetters) && myInput.value.match(lowerCaseLetters) &&  nickname.value.length>0 ){
+      document.querySelector(".input_vhod").style.display = "block";
+    }
+    
+    else{
+      document.querySelector(".input_vhod").style.display = "none";
+
+    }
+  }
+  </script>
+
+</body>
+</html>
